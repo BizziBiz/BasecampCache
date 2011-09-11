@@ -23,7 +23,8 @@
   
   Short version:
 
-     1. Download Basecamp PHP API <http://code.google.com/p/basecamp-php-api> and copy files into the "includes" folder. 
+     1. Download Basecamp PHP API <http://code.google.com/p/basecamp-php-api> and copy files into the "includes" 
+        folder. 
      2. Run install script in the "install" folder (install/index.html). 
      3. Update the BasecampCache.php file header with login info and use.
 
@@ -36,8 +37,8 @@
   folder. Alternatively you can execute the SQL statements in the bccache.sql file either from importing the file 
   or via a GUI like PHPMyAdmin. Once the database has been initialized you will need to manually update the login 
   info in the header of BasecampCache.php. Once this has been completed you can update the database tables by running
-  the BasecampCache.php file and passing the op argument to update the corresponding table (BasecampCache.php?op=OPCODE).
-  All OPCODEs are listed below
+  the BasecampCache.php file and passing the op argument to update the corresponding table 
+  (BasecampCache.php?op=OPCODE). All OPCODEs are listed below
   
 	  * projects
 	  * people
@@ -51,9 +52,9 @@
 	  * messages
 	  * milestones
 
-  To automate this you can also setup cron with wget to execute these on a schedule. An example cron setup is shown below
-  - for more information consult a cron reference - http://adminschoice.com/crontab-quick-reference provides a concise 
-  overview on how cron works.
+  To automate this you can also setup cron with wget to execute these on a schedule. An example cron setup is shown 
+  below - for more information consult a cron reference - http://adminschoice.com/crontab-quick-reference provides 
+  a concise overview on how cron works.
   
 	0 */1 * * * /usr/bin/wget -O - -q -t 1 /BasecampCache/BasecampCache.php?op=projects
 	10 */1 * * * /usr/bin/wget -O - -q -t 1 /BasecampCache/BasecampCache.php?op=people
