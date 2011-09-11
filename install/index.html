@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Basecamp Cache - Install Script</title>
+	</head>
+	<style type="text/css">
+	body{
+		font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; 
+		text-align: left;
+		margin: 20px;
+	}
+	p{
+		width: 600px;
+	}
+	label{
+		width: 180px;
+		display: block;
+		float: left;
+		text-align: right;
+		padding-right: 5px;
+	}
+	#db_submit{
+		margin-left: 195px;
+		margin-top: 15px;
+	}
+	</style>
+	<body>
+		<h1>Basecamp Cache - Install Script</h1>
+		<p>Simple install script to initialize the database. You can alternatively manually initialize the database by using the <a href="bccache.sql">bccache.sql</a> file located in the install directory. </p>
+		<form action="install.php" method="post">
+			<label>Database Host: </label><input type="text" name="host" value="localhost"/><br />
+			<label>Database Table: </label><input type="text" name="db" value="basecampCache" /><br />
+			<label>Database Username: </label><input type="text" name="usr" /><br />
+			<label>Database Password: </label><input type="text" name="pass" /><br />
+			<input type="submit" value="Initalize Database" id="db_submit"/>
+		</form>
+	</body>
+</html>
